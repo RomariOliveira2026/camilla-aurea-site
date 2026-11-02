@@ -1,0 +1,28 @@
+# Dependências e build
+node_modules
+dist
+dist-ssr
+*.local
+
+# Logs
+logs
+*.log
+npm-debug.log*
+
+# Variáveis de ambiente (nunca versionar)
+.env
+.env.*
+!.env.example
+
+# Editor / SO
+.vscode/*
+!.vscode/extensions.json
+.idea
+.DS_Store
+Thumbs.db
+
+# Artefatos de validação local
+.validation
+
+# Capturas para revis�o (podem ser regeneradas com .validation/capture.ps1)
+capturas-revisao

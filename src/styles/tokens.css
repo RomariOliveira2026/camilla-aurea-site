@@ -1,0 +1,119 @@
+/*
+ * Design tokens — Camilla Áurea (WEB-001)
+ *
+ * Contraste (WCAG 2.x) medido sobre as cores oficiais:
+ *   bordô #4B1120 / off-white #FFF8F0 ........ 14.24:1
+ *   ouro queimado #C9A86A / bordô ............. 6.64:1
+ *   ouro profundo #B68E55 / bordô ............. 4.99:1
+ *   ouro queimado / off-white ................. 2.15:1  → somente decorativo
+ *   ouro profundo / off-white ................. 2.85:1  → somente decorativo
+ *   ouro-tinta #7A5A2A / off-white ............ 6.00:1  → texto dourado sobre claro
+ *
+ * Breakpoints (custom properties não funcionam em @media; usar estes valores):
+ *   --bp-sm: 40em  (640px)
+ *   --bp-md: 56em  (896px)  → troca de navegação mobile/desktop
+ *   --bp-lg: 75em  (1200px)
+ */
+
+:root {
+  /* Cores oficiais */
+  --color-bordo: #4b1120;
+  --color-gold-burnt: #c9a86a;
+  --color-gold-deep: #b68e55;
+  --color-offwhite: #fff8f0;
+
+  /* Derivadas (apoio funcional, não substituem a paleta oficial) */
+  --color-bordo-950: #320b15;
+  --color-bordo-800: #5e1a2c;
+  --color-gold-ink: #7a5a2a;
+  --color-cream: #f5eadc;
+  --color-ink: #2b1218;
+  --color-ink-muted: #6b4c52;
+  --color-on-dark: #fff8f0;
+  --color-on-dark-muted: #d9c2c6;
+  --color-line: rgb(75 17 32 / 0.14);
+  --color-line-on-dark: rgb(201 168 106 / 0.35);
+
+  /* Papéis semânticos */
+  --surface-page: var(--color-offwhite);
+  --surface-alt: var(--color-cream);
+  --surface-dark: var(--color-bordo);
+  --text-primary: var(--color-ink);
+  --text-secondary: var(--color-ink-muted);
+  --text-accent: var(--color-gold-ink);
+  --focus-ring: var(--color-bordo);
+  --focus-ring-on-dark: var(--color-gold-burnt);
+
+  /* Tipografia */
+  --font-display: 'Cormorant Garamond', 'Cormorant', Garamond, 'Times New Roman', serif;
+  --font-body: 'Inter Variable', Inter, system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif;
+
+  --text-xs: 0.8125rem;
+  --text-sm: 0.9375rem;
+  --text-base: 1.0625rem;
+  --text-lg: clamp(1.125rem, 1.05rem + 0.35vw, 1.3125rem);
+  --text-xl: clamp(1.375rem, 1.2rem + 0.8vw, 1.75rem);
+  --text-2xl: clamp(1.75rem, 1.4rem + 1.6vw, 2.625rem);
+  --text-3xl: clamp(2.25rem, 1.6rem + 3vw, 3.75rem);
+  --text-display: clamp(2.75rem, 1.6rem + 5.4vw, 6rem);
+
+  --leading-tight: 1.1;
+  --leading-snug: 1.3;
+  --leading-body: 1.65;
+
+  --tracking-wide: 0.08em;
+  --tracking-caps: 0.18em;
+
+  --weight-regular: 400;
+  --weight-medium: 500;
+  --weight-semibold: 600;
+
+  /* Espaçamento (base 4px) */
+  --space-1: 0.25rem;
+  --space-2: 0.5rem;
+  --space-3: 0.75rem;
+  --space-4: 1rem;
+  --space-5: 1.5rem;
+  --space-6: 2rem;
+  --space-7: 3rem;
+  --space-8: 4rem;
+  --space-9: 6rem;
+  --space-10: 8rem;
+  --section-padding: clamp(var(--space-8), 6vw + 2rem, var(--space-10));
+  --gutter: clamp(1.25rem, 4vw, 2.5rem);
+
+  /* Layout */
+  --container-max: 72rem;
+  --container-narrow: 44rem;
+  --header-height: 4.5rem;
+  --prototype-height: 2.25rem;
+
+  /* Bordas */
+  --radius-sm: 2px;
+  --radius-md: 6px;
+  --radius-lg: 14px;
+  --radius-pill: 999px;
+  --border-hairline: 1px solid var(--color-line);
+  --border-gold: 1px solid var(--color-gold-burnt);
+
+  /* Sombras (quentes e discretas) */
+  --shadow-sm: 0 1px 2px rgb(75 17 32 / 0.06);
+  --shadow-md: 0 10px 30px -18px rgb(75 17 32 / 0.35);
+  --shadow-lg: 0 24px 60px -30px rgb(50 11 21 / 0.45);
+
+  /* Movimento */
+  --duration-fast: 150ms;
+  --duration-base: 250ms;
+  --ease-out: cubic-bezier(0.2, 0.7, 0.2, 1);
+
+  /* Camadas */
+  --z-header: 50;
+  --z-skip: 100;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  :root {
+    --duration-fast: 0ms;
+    --duration-base: 0ms;
+  }
+}
