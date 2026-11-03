@@ -24,5 +24,6 @@ Thumbs.db
 # Artefatos de validação local
 .validation
 
-# Capturas para revis�o (podem ser regeneradas com .validation/capture.ps1)
+# Capturas para revis�o (podem ser regeneradas com .validation/capture.ps1)
 capturas-revisao
+.vercel
