@@ -1,5 +1,6 @@
 import { useCallback, useEffect, useRef, useState } from 'react'
 import { navItems } from '../../content/site'
+import { AppLink } from '../ui/AppLink'
 import { Wordmark } from '../ui/Wordmark'
 
 const DESKTOP_QUERY = '(min-width: 56em)'
@@ -38,10 +39,10 @@ export function SiteHeader() {
   return (
     <header className="site-header">
       <div className="container site-header__inner">
-        <a className="site-header__brand" href="#inicio" onClick={() => closeMenu()}>
+        <AppLink className="site-header__brand" href="/" onClick={() => closeMenu()}>
           <Wordmark />
           <span className="sr-only"> — voltar ao início</span>
-        </a>
+        </AppLink>
 
         <button
           ref={toggleRef}
@@ -66,10 +67,10 @@ export function SiteHeader() {
         >
           <ul role="list" className="site-nav__list">
             {navItems.map((item) => (
-              <li key={item.id}>
-                <a className="site-nav__link" href={`#${item.id}`} onClick={() => closeMenu()}>
+              <li key={item.href}>
+                <AppLink className="site-nav__link" href={item.href} onClick={() => closeMenu()}>
                   {item.label}
-                </a>
+                </AppLink>
               </li>
             ))}
           </ul>

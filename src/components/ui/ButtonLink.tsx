@@ -1,4 +1,5 @@
 import type { ReactNode } from 'react'
+import { AppLink } from './AppLink'
 
 type ButtonLinkProps = {
   href: string
@@ -17,21 +18,17 @@ export function ButtonLink({
 }: ButtonLinkProps) {
   const classes = ['btn', `btn--${variant}`, className].filter(Boolean).join(' ')
 
-  if (external) {
-    return (
-      <a className={classes} href={href} target="_blank" rel="noopener noreferrer">
-        {children}
-        <span className="btn__icon" aria-hidden="true">
-          ↗
-        </span>
-        <span className="sr-only"> (abre em nova aba)</span>
-      </a>
-    )
-  }
-
   return (
-    <a className={classes} href={href}>
+    <AppLink href={href} className={classes} external={external}>
       {children}
-    </a>
+      {external ? (
+        <>
+          <span className="btn__icon" aria-hidden="true">
+            ↗
+          </span>
+          <span className="sr-only"> (abre em nova aba)</span>
+        </>
+      ) : null}
+    </AppLink>
   )
 }

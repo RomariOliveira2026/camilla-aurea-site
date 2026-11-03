@@ -27,15 +27,15 @@ export const instagram: ExternalProfile = {
   confirmed: true,
 }
 
-export type NavItem = { id: string; label: string }
+export type NavItem = { href: string; label: string }
 
 export const navItems: NavItem[] = [
-  { id: 'sobre', label: 'Sobre' },
-  { id: 'metodo', label: 'Método Áurea' },
-  { id: 'territorios', label: 'Territórios' },
-  { id: 'luxo-afetivo', label: 'Luxo Afetivo' },
-  { id: 'biblioteca', label: 'Biblioteca' },
-  { id: 'reflexoes', label: 'Reflexões' },
+  { href: '/#sobre', label: 'Sobre' },
+  { href: '/#metodo', label: 'Método Áurea' },
+  { href: '/#territorios', label: 'Territórios' },
+  { href: '/#luxo-afetivo', label: 'Luxo Afetivo' },
+  { href: '/biblioteca', label: 'Biblioteca' },
+  { href: '/#reflexoes', label: 'Reflexões' },
 ]
 
 export type SiteImage = {
@@ -49,13 +49,16 @@ export const hero = {
   eyebrow: brand.category,
   title: 'Camilla Áurea',
   subtitle: brand.tagline,
-  lead: 'Um convite para reconhecer seu valor, recuperar sua voz e viver com mais autenticidade.',
+  headline: 'Você não precisa se abandonar para ser amada. O ouro já estava em você.',
+  audienceNote:
+    'Hipótese editorial a validar: mulheres de 30 a 45 anos interessadas em autovalor, autonomia, presença e relações conscientes.',
   image: {
     src: heroImage,
-    alt: 'Mulher sorridente, de vestido longo bordô, conduz um patinete por uma rua de pedras iluminada à noite.',
+    alt: 'Imagem editorial: mulher de vestido longo bordô conduz um patinete por uma rua iluminada à noite. Não é um retrato da fundadora.',
     width: 538,
     height: 803,
   } satisfies SiteImage,
+  imageCaption: 'Imagem editorial — não é um retrato da fundadora.',
 }
 
 export const about = {
@@ -63,7 +66,8 @@ export const about = {
   title: 'Sobre Camilla',
   paragraphs: [
     'Camilla Áurea é uma marca autoral de desenvolvimento pessoal feminino, construída em torno de três ideias: poder, valor e luxo afetivo.',
-    'A proposta é oferecer caminhos de reflexão para que cada mulher reconheça a própria história, faça escolhas mais conscientes e expresse quem é com autenticidade.',
+    'A comunicação desta versão se dirige, como hipótese editorial a validar, a mulheres de 30 a 45 anos interessadas em autovalor, autonomia, presença e relações conscientes.',
+    'O amor romântico pode fazer parte do caminho. Não é o único horizonte da marca: o convite é reconhecer o próprio valor, recuperar a voz e viver com autenticidade — em relação consigo, com as outras pessoas e com as escolhas de cada dia.',
   ],
   pendingNote:
     'A biografia oficial de Camilla está em preparação e será publicada somente após redação e aprovação da autora.',
@@ -75,7 +79,7 @@ export const method = {
   eyebrow: 'Método',
   title: 'Método Áurea',
   intro:
-    'Três etapas que conduzem do reconhecimento à expressão. Cada etapa é um movimento próprio — e, juntas, formam um caminho.',
+    'Três etapas que conduzem do reconhecimento à expressão. Cada uma é um movimento próprio; juntas, formam um caminho de autovalor, autonomia, presença e relações conscientes.',
   steps: [
     { number: '01', name: 'Minerar', summary: 'Reconhecer quem você se tornou.' },
     { number: '02', name: 'Lapidar', summary: 'Construir quem você escolhe ser.' },
@@ -116,19 +120,19 @@ export const territories = {
 export const affectiveLuxury = {
   eyebrow: 'Conceito',
   title: 'Luxo Afetivo',
-  lead: 'Luxo afetivo não se mede pelo preço. Ele está na forma como você cuida de si, das suas relações e das escolhas que faz todos os dias.',
+  lead: 'Luxo afetivo não se mede pelo preço. Está na forma como você se escolhe, se cuida e se relaciona — consigo mesma, com as pessoas e com a vida que constrói. O amor romântico pode entrar nessa conversa; não é a única medida de uma vida bem vivida.',
   principles: [
     {
-      title: 'Cuidado como escolha',
-      text: 'Tratar a própria vida com atenção e respeito, sem esperar permissão.',
+      title: 'Autovalor',
+      text: 'Honrar o ouro que já estava em você, sem se abandonar para caber no desejo do outro.',
     },
     {
-      title: 'Presença com intenção',
-      text: 'Estar inteira no que importa e reconhecer o que já não cabe.',
+      title: 'Autonomia e presença',
+      text: 'Estar inteira no que importa, com limites claros e escolhas próprias.',
     },
     {
       title: 'Relações conscientes',
-      text: 'Construir vínculos que honrem o seu valor — a começar pelo vínculo consigo mesma.',
+      text: 'Construir vínculos que respeitam o seu valor — a começar pelo vínculo consigo mesma, e sem reduzir a vida a um único tipo de amor.',
     },
   ],
 }
@@ -147,7 +151,7 @@ export const library = {
   eyebrow: 'Biblioteca',
   title: 'Biblioteca Áurea',
   intro:
-    'Um acervo de conteúdos organizado pelos sete pilares temáticos da marca. A biblioteca está em preparação e ainda não possui materiais disponíveis.',
+    'Um acervo organizado por linhas editoriais e pelos sete pilares temáticos da marca. Novas séries podem ser acrescentadas sem reconstruir a estrutura. A primeira linha — Provocações Áureas — está em preparação.',
   status: 'Em preparação',
 }
 

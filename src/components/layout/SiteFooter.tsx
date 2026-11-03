@@ -1,5 +1,6 @@
 import { brand, disclaimer, instagram, navItems } from '../../content/site'
 import { legalDocuments } from '../../content/legal'
+import { AppLink } from '../ui/AppLink'
 import { Wordmark } from '../ui/Wordmark'
 
 export function SiteFooter() {
@@ -18,8 +19,8 @@ export function SiteFooter() {
             <h2 className="site-footer__heading">Navegação</h2>
             <ul role="list" className="site-footer__list">
               {navItems.map((item) => (
-                <li key={item.id}>
-                  <a href={`#${item.id}`}>{item.label}</a>
+                <li key={item.href}>
+                  <AppLink href={item.href}>{item.label}</AppLink>
                 </li>
               ))}
             </ul>
@@ -47,7 +48,7 @@ export function SiteFooter() {
               {legalDocuments.map((doc) => (
                 <li key={doc.slug}>
                   {doc.status === 'published' ? (
-                    <a href={doc.path}>{doc.title}</a>
+                    <AppLink href={doc.path}>{doc.title}</AppLink>
                   ) : (
                     <span className="site-footer__muted">
                       {doc.title} <span className="site-footer__tag">em elaboração</span>
@@ -65,7 +66,7 @@ export function SiteFooter() {
           <p>
             © {year} {brand.name}. Todos os direitos reservados.
           </p>
-          <p>Versão de desenvolvimento WEB-001 · não publicada</p>
+          <p>Versão de desenvolvimento WEB-001.1 · não publicada</p>
         </div>
       </div>
     </footer>

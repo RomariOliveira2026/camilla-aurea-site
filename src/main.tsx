@@ -11,6 +11,7 @@ import './styles/base.css'
 import './components/ui/ui.css'
 import './components/layout/layout.css'
 import './sections/sections.css'
+import './pages/pages.css'
 
 import App from './App'
 
