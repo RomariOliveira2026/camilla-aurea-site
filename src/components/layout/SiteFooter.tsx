@@ -66,7 +66,7 @@ export function SiteFooter() {
           <p>
             © {year} {brand.name}. Todos os direitos reservados.
           </p>
-          <p>Versão de desenvolvimento WEB-001.1 · não publicada</p>
+          <p>Versão WEB-001.1 · em revisão visual</p>
         </div>
       </div>
     </footer>
