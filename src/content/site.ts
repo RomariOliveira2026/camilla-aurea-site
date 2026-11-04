@@ -68,11 +68,11 @@ export const hero = {
     'Hipótese editorial a validar: mulheres de 30 a 45 anos interessadas em autovalor, autonomia, presença e relações conscientes.',
   image: {
     src: heroImage,
-    alt: 'Imagem editorial: mulher de vestido longo bordô conduz um patinete por uma rua iluminada à noite. Não é um retrato da fundadora.',
-    width: 538,
-    height: 803,
+    alt: 'Mockup do e-book Minerar: capa bordô com moldura dourada e o título Minerar — 7 perguntas para voltar a si.',
+    width: 819,
+    height: 1024,
   } satisfies SiteImage,
-  imageCaption: 'Imagem editorial — não é um retrato da fundadora.',
+  imageCaption: 'Mockup do e-book Minerar — Método Áurea, etapa 01.',
 }
 
 export const about = {

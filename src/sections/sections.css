@@ -125,10 +125,10 @@
 .hero__media {
   position: relative;
   width: 100%;
-  aspect-ratio: 538 / 803;
+  aspect-ratio: 819 / 1024;
   border-radius: var(--radius-lg);
   overflow: hidden;
-  background: var(--color-bordo-800);
+  background: #000;
   box-shadow: var(--shadow-lg);
 }
 
@@ -140,19 +140,14 @@
 }
 
 .hero__media::after {
-  content: '';
-  position: absolute;
-  inset: var(--space-3);
-  border: 1px solid rgb(201 168 106 / 0.45);
-  border-radius: calc(var(--radius-lg) - 4px);
-  pointer-events: none;
+  content: none;
 }
 
 .hero__image {
   width: 100%;
   height: 100%;
-  object-fit: cover;
-  object-position: 50% 30%;
+  object-fit: contain;
+  object-position: center;
 }
 
 @media (max-width: 55.99em) {
