@@ -28,6 +28,19 @@ export const instagram: ExternalProfile = {
   confirmed: true,
 }
 
+export const whatsapp = {
+  label: 'WhatsApp',
+  /** DDI + DDD + número, só dígitos. */
+  e164: '554892055898',
+  preview: 'Olá, Camilla. Cheguei pelo site Camilla Áurea.',
+  confirmed: true,
+}
+
+export function whatsappHref(): string {
+  const text = encodeURIComponent(whatsapp.preview)
+  return `https://wa.me/${whatsapp.e164}?text=${text}`
+}
+
 export type NavItem = { href: string; label: string }
 
 export const navItems: NavItem[] = [

@@ -108,7 +108,36 @@
 
   /* Camadas */
   --z-header: 50;
+  --z-float: 45;
   --z-skip: 100;
+}
+
+html[data-theme='night'] {
+  color-scheme: dark;
+  --surface-page: #1a0a0f;
+  --surface-alt: #2b1018;
+  --text-primary: var(--color-offwhite);
+  --text-secondary: var(--color-on-dark-muted);
+  --text-accent: var(--color-gold-burnt);
+  --color-line: rgb(201 168 106 / 0.22);
+  --focus-ring: var(--color-gold-burnt);
+  --color-ink: var(--color-offwhite);
+  --color-ink-muted: var(--color-on-dark-muted);
+  --color-gold-ink: var(--color-gold-burnt);
+  --color-cream: #2b1018;
+}
+
+html[data-theme='night'] .section__title,
+html[data-theme='night'] .method__name,
+html[data-theme='night'] .territory__name,
+html[data-theme='night'] .library__name,
+html[data-theme='night'] .empty-state__text,
+html[data-theme='night'] .page-header__title,
+html[data-theme='night'] .series-card__title,
+html[data-theme='night'] .entry-card__title,
+html[data-theme='night'] .carousel__text,
+html[data-theme='night'] .breadcrumbs a {
+  color: var(--color-offwhite);
 }
 
 @media (prefers-reduced-motion: reduce) {

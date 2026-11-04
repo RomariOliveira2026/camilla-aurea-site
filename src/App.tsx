@@ -1,8 +1,10 @@
 import { useEffect } from 'react'
 import { BrowserRouter, Route, Routes, useLocation } from 'react-router-dom'
+import { FloatTools } from './components/layout/FloatTools'
 import { PrototypeNotice } from './components/layout/PrototypeNotice'
 import { SiteFooter } from './components/layout/SiteFooter'
 import { SiteHeader } from './components/layout/SiteHeader'
+import { ThemeProvider } from './components/layout/ThemeProvider'
 import { EntryPage } from './pages/EntryPage'
 import { HomePage } from './pages/HomePage'
 import { LibraryPage } from './pages/LibraryPage'
@@ -28,7 +30,7 @@ function RouteEffects() {
 
 function AppShell() {
   return (
-    <>
+    <ThemeProvider>
       <RouteEffects />
       <a className="skip-link" href="#conteudo">
         Pular para o conteúdo
@@ -45,7 +47,8 @@ function AppShell() {
         </Routes>
       </main>
       <SiteFooter />
-    </>
+      <FloatTools />
+    </ThemeProvider>
   )
 }
 

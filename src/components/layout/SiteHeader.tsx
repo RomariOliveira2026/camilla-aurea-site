@@ -2,6 +2,7 @@ import { useCallback, useEffect, useRef, useState } from 'react'
 import { navItems } from '../../content/site'
 import { AppLink } from '../ui/AppLink'
 import { MinerarCta } from '../ui/MinerarCta'
+import { ThemeToggle } from '../ui/ThemeToggle'
 import { Wordmark } from '../ui/Wordmark'
 
 const DESKTOP_QUERY = '(min-width: 56em)'
@@ -81,6 +82,7 @@ export function SiteHeader() {
         </nav>
 
         <div className="site-header__cta site-header__cta--bar">
+          <ThemeToggle />
           <MinerarCta />
         </div>
       </div>

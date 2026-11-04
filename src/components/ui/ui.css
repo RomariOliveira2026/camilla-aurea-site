@@ -142,6 +142,25 @@
   outline-color: var(--color-bordo);
 }
 
+html[data-theme='night'] .btn--primary {
+  background: var(--color-gold-burnt);
+  color: var(--color-bordo);
+}
+
+html[data-theme='night'] .btn--primary:hover {
+  background: var(--color-offwhite);
+}
+
+html[data-theme='night'] .btn--secondary {
+  border-color: var(--color-line-on-dark);
+  color: var(--color-on-dark);
+}
+
+html[data-theme='night'] .btn--text {
+  color: var(--color-on-dark);
+  text-decoration-color: var(--color-gold-burnt);
+}
+
 .btn--unavailable {
   border: 1px dashed var(--color-line);
   color: var(--text-secondary);
