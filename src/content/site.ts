@@ -4,6 +4,7 @@
  * dependem de revisão e aprovação da autora antes de qualquer publicação.
  */
 
+import aboutImage from '../assets/images/about.jpg'
 import heroImage from '../assets/images/hero.jpg'
 
 export const brand = {
@@ -64,6 +65,12 @@ export const hero = {
 export const about = {
   eyebrow: 'Sobre',
   title: 'Sobre Camilla',
+  image: {
+    src: aboutImage,
+    alt: 'Retrato de Camilla, sorrindo, sentada em um banco de madeira, com vestido verde-oliva de manga longa.',
+    width: 819,
+    height: 1024,
+  } satisfies SiteImage,
   paragraphs: [
     'Camilla Áurea é uma marca autoral de desenvolvimento pessoal feminino, construída em torno de três ideias: poder, valor e luxo afetivo.',
     'A comunicação desta versão se dirige, como hipótese editorial a validar, a mulheres de 30 a 45 anos interessadas em autovalor, autonomia, presença e relações conscientes.',
@@ -146,6 +153,32 @@ export const pillars: string[] = [
   'Espiritualidade prática',
   'Identidade e expressão',
 ]
+
+/**
+ * Guia Minerar — CTA de destaque e seção informativa.
+ * Destino atual: âncora da Home. Quando a landing aprovada existir,
+ * mudar `destination` para `'landing'` (usa `landingPath`).
+ */
+export const minerarGuide = {
+  ctaLabel: 'Receber o Guia Minerar',
+  sectionId: 'guia-minerar',
+  landingPath: '/guia-minerar',
+  destination: 'section' as 'section' | 'landing',
+  status: 'in-preparation' as const,
+  statusLabel: 'Em preparação',
+  eyebrow: 'Guia',
+  title: 'Guia Minerar',
+  intro:
+    'O Guia Minerar é o material previsto para a primeira etapa do Método Áurea — Minerar: reconhecer quem você se tornou.',
+  pendingNote:
+    'O conteúdo do guia está em preparação e será publicado somente após redação e aprovação da autora. Nesta versão não há download, formulário, cadastro nem coleta de dados.',
+}
+
+export function minerarGuideHref(): string {
+  return minerarGuide.destination === 'landing'
+    ? minerarGuide.landingPath
+    : `/#${minerarGuide.sectionId}`
+}
 
 export const library = {
   eyebrow: 'Biblioteca',

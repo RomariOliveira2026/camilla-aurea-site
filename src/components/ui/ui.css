@@ -25,14 +25,13 @@
   background: var(--color-gold-burnt);
 }
 
-/* ---------- Wordmark (provisório) ---------- */
+/* ---------- Logo oficial ---------- */
 .wordmark {
-  font-family: var(--font-display);
-  font-weight: var(--weight-medium);
-  font-size: 1.25rem;
-  letter-spacing: var(--tracking-caps);
-  text-transform: uppercase;
-  white-space: nowrap;
+  display: block;
+  width: auto;
+  height: 3rem;
+  max-width: min(14rem, 62vw);
+  object-fit: contain;
 }
 
 /* ---------- Botões ---------- */
@@ -117,6 +116,30 @@
 .on-dark .btn--text {
   color: var(--color-on-dark);
   text-decoration-color: var(--color-gold-burnt);
+}
+
+.btn--cta {
+  background: var(--color-gold-burnt);
+  color: var(--color-bordo);
+  border-radius: var(--radius-pill);
+}
+
+.btn--cta:hover {
+  background: var(--color-gold-deep);
+  color: var(--color-bordo);
+}
+
+.btn--cta:focus-visible {
+  outline: 2px solid var(--color-bordo);
+  outline-offset: 3px;
+}
+
+.site-header.on-dark .site-header__cta--bar .btn--cta:focus-visible {
+  outline-color: var(--color-offwhite);
+}
+
+.site-header__cta--panel .btn--cta:focus-visible {
+  outline-color: var(--color-bordo);
 }
 
 .btn--unavailable {

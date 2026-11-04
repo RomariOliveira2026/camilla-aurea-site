@@ -293,11 +293,29 @@
 
 .about__media {
   max-width: 28rem;
+  margin: 0;
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  background: var(--color-cream);
+  box-shadow: var(--shadow-md);
+}
+
+.about__image {
+  width: 100%;
+  height: auto;
+  display: block;
+  object-fit: cover;
+  object-position: 50% 12%;
 }
 
 @media (max-width: 55.99em) {
   .about__media {
-    aspect-ratio: 16 / 11;
+    max-width: none;
+    aspect-ratio: 4 / 5;
+  }
+
+  .about__image {
+    height: 100%;
   }
 }
 

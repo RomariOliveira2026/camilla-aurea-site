@@ -1,6 +1,7 @@
 import { useCallback, useEffect, useRef, useState } from 'react'
 import { navItems } from '../../content/site'
 import { AppLink } from '../ui/AppLink'
+import { MinerarCta } from '../ui/MinerarCta'
 import { Wordmark } from '../ui/Wordmark'
 
 const DESKTOP_QUERY = '(min-width: 56em)'
@@ -37,7 +38,7 @@ export function SiteHeader() {
   }, [isOpen, closeMenu])
 
   return (
-    <header className="site-header">
+    <header className="site-header on-dark">
       <div className="container site-header__inner">
         <AppLink className="site-header__brand" href="/" onClick={() => closeMenu()}>
           <Wordmark />
@@ -74,7 +75,14 @@ export function SiteHeader() {
               </li>
             ))}
           </ul>
+          <div className="site-header__cta site-header__cta--panel">
+            <MinerarCta onClick={() => closeMenu()} />
+          </div>
         </nav>
+
+        <div className="site-header__cta site-header__cta--bar">
+          <MinerarCta />
+        </div>
       </div>
     </header>
   )
