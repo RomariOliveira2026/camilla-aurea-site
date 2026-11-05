@@ -5,7 +5,7 @@
  */
 
 import aboutImage from '../assets/images/about.jpg'
-import heroImage from '../assets/images/hero.jpg'
+import heroImage from '../assets/images/hero.png'
 
 export const brand = {
   name: 'Camilla Áurea',
@@ -68,9 +68,9 @@ export const hero = {
     'Hipótese editorial a validar: mulheres de 30 a 45 anos interessadas em autovalor, autonomia, presença e relações conscientes.',
   image: {
     src: heroImage,
-    alt: 'Mockup do e-book Minerar: capa bordô com moldura dourada e o título Minerar — 7 perguntas para voltar a si.',
-    width: 819,
-    height: 1024,
+    alt: 'Mockup do e-book Minerar: livro bordô em pé com o título Minerar — o ouro que existe em você, espelho dourado e uma pilha de livros ao lado.',
+    width: 760,
+    height: 681,
   } satisfies SiteImage,
   imageCaption: 'Mockup do e-book Minerar — Método Áurea, etapa 01.',
 }
