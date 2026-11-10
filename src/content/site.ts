@@ -13,6 +13,25 @@ export const brand = {
   category: 'Desenvolvimento pessoal feminino',
 } as const
 
+/**
+ * Origem pública HTTPS homologada no domínio do site.
+ * Usar só esta origem em compartilhamento, canônico e Open Graph.
+ */
+export const sitePublic = {
+  origin: 'https://camillaurea.com.br',
+  linksPath: '/links',
+  ogImagePath: '/og-links.png',
+} as const
+
+export function publicUrl(path: string): string {
+  const normalized = path.startsWith('/') ? path : `/${path}`
+  return `${sitePublic.origin}${normalized}`
+}
+
+export function aureaLinksUrl(): string {
+  return publicUrl(sitePublic.linksPath)
+}
+
 export type ExternalProfile = {
   label: string
   handle: string
@@ -52,6 +71,9 @@ export const navItems: NavItem[] = [
   { href: '/#reflexoes', label: 'Reflexões' },
 ]
 
+/** Itens só no rodapé — não entram no cabeçalho para não diluir o menu. */
+export const footerOnlyItems: NavItem[] = [{ href: '/links', label: 'Áurea Links' }]
+
 export type SiteImage = {
   src: string
   alt: string
@@ -60,19 +82,18 @@ export type SiteImage = {
 }
 
 export const hero = {
-  eyebrow: brand.category,
-  title: 'Camilla Áurea',
-  subtitle: brand.tagline,
-  headline: 'Você não precisa se abandonar para ser amada. O ouro já estava em você.',
-  audienceNote:
-    'Hipótese editorial a validar: mulheres de 30 a 45 anos interessadas em autovalor, autonomia, presença e relações conscientes.',
+  eyebrow: 'Guia gratuito · Camilla Áurea',
+  title: 'O ouro já estava em você.',
+  description:
+    'Uma experiência gratuita para olhar para sua vida com mais presença, reconhecer suas necessidades e descobrir aspectos de si que talvez ainda não tenha explorado.',
+  presentation: 'MINERAR — O Ouro que Existe em Você | 7 Perguntas para Voltar a Si',
   image: {
     src: heroImage,
-    alt: 'Mockup do e-book Minerar: livro bordô em pé com o título Minerar — o ouro que existe em você, espelho dourado e uma pilha de livros ao lado.',
-    width: 760,
-    height: 681,
+    alt: 'Mockup do e-book Minerar: livro bordô em 3D com espelho dourado, lírio e pepita de ouro, capa de O Ouro que Existe em Você.',
+    width: 689,
+    height: 999,
   } satisfies SiteImage,
-  imageCaption: 'Mockup do e-book Minerar — Método Áurea, etapa 01.',
+  imageCaption: 'Capa aprovada — MINERAR, Método Áurea.',
 }
 
 export const about = {
@@ -168,29 +189,32 @@ export const pillars: string[] = [
 ]
 
 /**
- * Guia Minerar — CTA de destaque e seção informativa.
- * Destino atual: âncora da Home. Quando a landing aprovada existir,
- * mudar `destination` para `'landing'` (usa `landingPath`).
+ * Guia Minerar — CTA de destaque, landing e âncora do formulário.
  */
 export const minerarGuide = {
   ctaLabel: 'Receber o Guia Minerar',
   sectionId: 'guia-minerar',
-  landingPath: '/guia-minerar',
-  destination: 'section' as 'section' | 'landing',
-  status: 'in-preparation' as const,
-  statusLabel: 'Em preparação',
+  landingPath: '/minerar',
+  formAnchor: 'guia-formulario',
+  destination: 'landing' as 'section' | 'landing',
+  status: 'ready-for-review' as const,
+  statusLabel: 'Revisão visual',
   eyebrow: 'Guia',
   title: 'Guia Minerar',
   intro:
-    'O Guia Minerar é o material previsto para a primeira etapa do Método Áurea — Minerar: reconhecer quem você se tornou.',
+    'O Guia Minerar é o material da primeira etapa do Método Áurea — Minerar: reconhecer quem você se tornou.',
   pendingNote:
-    'O conteúdo do guia está em preparação e será publicado somente após redação e aprovação da autora. Nesta versão não há download, formulário, cadastro nem coleta de dados.',
+    'A landing e o formulário estão em demonstração para revisão. O envio real do PDF e a captação de contatos ainda não estão homologados.',
 }
 
 export function minerarGuideHref(): string {
   return minerarGuide.destination === 'landing'
     ? minerarGuide.landingPath
     : `/#${minerarGuide.sectionId}`
+}
+
+export function minerarFormHref(): string {
+  return `${minerarGuide.landingPath}#${minerarGuide.formAnchor}`
 }
 
 export const library = {

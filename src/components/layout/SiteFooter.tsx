@@ -1,4 +1,4 @@
-import { brand, disclaimer, instagram, navItems } from '../../content/site'
+import { brand, disclaimer, footerOnlyItems, instagram, navItems } from '../../content/site'
 import { legalDocuments } from '../../content/legal'
 import { AppLink } from '../ui/AppLink'
 import { Wordmark } from '../ui/Wordmark'
@@ -18,7 +18,7 @@ export function SiteFooter() {
           <nav aria-label="Navegação do rodapé">
             <h2 className="site-footer__heading">Navegação</h2>
             <ul role="list" className="site-footer__list">
-              {navItems.map((item) => (
+              {[...navItems, ...footerOnlyItems].map((item) => (
                 <li key={item.href}>
                   <AppLink href={item.href}>{item.label}</AppLink>
                 </li>
@@ -66,7 +66,7 @@ export function SiteFooter() {
           <p>
             © {year} {brand.name}. Todos os direitos reservados.
           </p>
-            <p>Versão WEB-001.3 · em revisão visual</p>
+            <p>Versão WEB-ÁUREA-LINKS-003 · em revisão visual</p>
         </div>
       </div>
     </footer>

@@ -1,5 +1,5 @@
 import type { MouseEventHandler } from 'react'
-import { minerarGuide, minerarGuideHref } from '../../content/site'
+import { minerarGuide, minerarFormHref } from '../../content/site'
 import { ButtonLink } from './ButtonLink'
 
 type MinerarCtaProps = {
@@ -9,7 +9,7 @@ type MinerarCtaProps = {
 
 export function MinerarCta({ className, onClick }: MinerarCtaProps) {
   return (
-    <ButtonLink href={minerarGuideHref()} variant="cta" className={className} onClick={onClick}>
+    <ButtonLink href={minerarFormHref()} variant="cta" className={className} onClick={onClick}>
       {minerarGuide.ctaLabel}
     </ButtonLink>
   )

@@ -1,7 +1,10 @@
 import { useEffect, useState } from 'react'
-import { whatsapp, whatsappHref } from '../../content/site'
+import { useLocation } from 'react-router-dom'
+import { minerarGuide, whatsapp, whatsappHref } from '../../content/site'
 
 export function FloatTools() {
+  const { pathname } = useLocation()
+  const hideWhatsapp = pathname === minerarGuide.landingPath
   const [showTop, setShowTop] = useState(false)
 
   useEffect(() => {
@@ -18,7 +21,7 @@ export function FloatTools() {
 
   return (
     <div className="float-tools">
-      {whatsapp.confirmed ? (
+      {whatsapp.confirmed && !hideWhatsapp ? (
         <a
           className="float-tools__btn float-tools__btn--whatsapp"
           href={whatsappHref()}

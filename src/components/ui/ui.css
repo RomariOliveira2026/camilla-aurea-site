@@ -35,6 +35,11 @@
 }
 
 /* ---------- Botões ---------- */
+button.btn {
+  font-family: inherit;
+  appearance: none;
+}
+
 .btn {
   display: inline-flex;
   align-items: center;

@@ -1,6 +1,13 @@
 {
   "framework": "vite",
-  "rewrites": [{ "source": "/(.*)", "destination": "/index.html" }],
+  "buildCommand": "npm run build",
+  "redirects": [
+    { "source": "/links/", "destination": "/links", "permanent": true }
+  ],
+  "rewrites": [
+    { "source": "/links", "destination": "/links.html" },
+    { "source": "/(.*)", "destination": "/index.html" }
+  ],
   "headers": [
     {
       "source": "/(.*)",

@@ -1,4 +1,5 @@
-import { minerarGuide } from '../content/site'
+import { minerarGuide, minerarGuideHref } from '../content/site'
+import { ButtonLink } from '../components/ui/ButtonLink'
 import { Section } from '../components/ui/Section'
 import { StatusBadge } from '../components/ui/StatusBadge'
 
@@ -12,8 +13,10 @@ export function MinerarGuide() {
       aside={<StatusBadge>{minerarGuide.statusLabel}</StatusBadge>}
     >
       <div className="empty-state">
-        <p className="empty-state__text">O guia ainda não está disponível para envio.</p>
-        <p className="empty-state__hint">{minerarGuide.pendingNote}</p>
+        <p className="empty-state__text">{minerarGuide.pendingNote}</p>
+        <p className="empty-state__hint">
+          <ButtonLink href={minerarGuideHref()}>Ir para a página MINERAR</ButtonLink>
+        </p>
       </div>
     </Section>
   )

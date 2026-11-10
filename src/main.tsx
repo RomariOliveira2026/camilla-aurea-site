@@ -9,9 +9,11 @@ import '@fontsource-variable/inter/wght.css'
 import './styles/tokens.css'
 import './styles/base.css'
 import './components/ui/ui.css'
+import './components/capture/capture.css'
 import './components/layout/layout.css'
 import './sections/sections.css'
 import './pages/pages.css'
+import './pages/links.css'
 
 import App from './App'
 
