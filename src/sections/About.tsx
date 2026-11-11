@@ -1,27 +1,28 @@
-import { about } from '../content/site'
+import { aboutPage } from '../content/aboutPage'
+import { ButtonLink } from '../components/ui/ButtonLink'
 import { Section } from '../components/ui/Section'
 
 export function About() {
   return (
-    <Section id="sobre" eyebrow={about.eyebrow} title={about.title}>
+    <Section id="sobre" eyebrow={aboutPage.presentation.eyebrow} title={aboutPage.title}>
       <div className="about">
         <figure className="about__media">
           <img
             className="about__image"
-            src={about.image.src}
-            alt={about.image.alt}
-            width={about.image.width}
-            height={about.image.height}
+            src={aboutPage.image.src}
+            alt={aboutPage.image.alt}
+            width={aboutPage.image.width}
+            height={aboutPage.image.height}
             decoding="async"
           />
         </figure>
         <div className="about__body">
-          {about.paragraphs.map((paragraph) => (
-            <p key={paragraph}>{paragraph}</p>
-          ))}
-          <p className="pending-note">
-            <span className="pending-note__label">Em preparação</span>
-            {about.pendingNote}
+          <p className="about__subtitle">{aboutPage.subtitle}</p>
+          <p>{aboutPage.presentation.lead}</p>
+          <p>
+            <ButtonLink href={aboutPage.path} variant="text">
+              Ler a trajetória
+            </ButtonLink>
           </p>
         </div>
       </div>

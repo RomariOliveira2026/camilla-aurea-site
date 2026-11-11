@@ -14,6 +14,8 @@ import './components/layout/layout.css'
 import './sections/sections.css'
 import './pages/pages.css'
 import './pages/links.css'
+import './pages/sobre.css'
+import './pages/reflexoes.css'
 
 import App from './App'
 

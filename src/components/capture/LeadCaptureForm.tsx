@@ -2,6 +2,7 @@ import { useId, useState, type FormEvent } from 'react'
 import { submitLead } from '../../capture/provider'
 import type { CaptureSource } from '../../capture/types'
 import { leadFormCopy } from '../../content/capture'
+import { AppLink } from '../ui/AppLink'
 
 type LeadCaptureFormProps = {
   source: CaptureSource
@@ -169,7 +170,12 @@ export function LeadCaptureForm({
             {busy ? leadFormCopy.submitting : leadFormCopy.submit}
           </button>
 
-          {showPrivacyNote ? <p className="capture-form__privacy">{leadFormCopy.privacyNote}</p> : null}
+          {showPrivacyNote ? (
+            <p className="capture-form__privacy">
+              {leadFormCopy.privacyNote}{' '}
+              <AppLink href={leadFormCopy.privacyHref}>{leadFormCopy.privacyLinkLabel}</AppLink>.
+            </p>
+          ) : null}
         </>
       )}
     </form>

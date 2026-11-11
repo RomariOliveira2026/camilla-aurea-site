@@ -1,9 +1,10 @@
 import type { MouseEvent } from 'react'
 import { LeadCaptureForm } from '../components/capture/LeadCaptureForm'
 import { GuideMockup } from '../components/capture/GuideMockup'
+import { AppLink } from '../components/ui/AppLink'
 import { ButtonLink } from '../components/ui/ButtonLink'
-import { minerarLanding } from '../content/capture'
-import { hero, minerarFormHref, minerarGuide } from '../content/site'
+import { leadFormCopy, minerarLanding } from '../content/capture'
+import { minerarFormHref, minerarGuide } from '../content/site'
 import { usePageTitle } from '../hooks/usePageTitle'
 
 function focusGuideForm(behavior: ScrollBehavior = 'smooth') {
@@ -47,7 +48,7 @@ export function MinerarPage() {
               </ButtonLink>
             </p>
           </div>
-          <GuideMockup caption={hero.imageCaption} priority />
+          <GuideMockup priority />
         </div>
       </section>
 
@@ -67,7 +68,10 @@ export function MinerarPage() {
           </div>
           <div>
             <LeadCaptureForm source="minerar-landing" tone="light" showPrivacyNote={false} />
-            <p className="minerar-privacy">{minerarLanding.privacyCompact}</p>
+            <p className="minerar-privacy">
+              {minerarLanding.privacyCompact}{' '}
+              <AppLink href={leadFormCopy.privacyHref}>{leadFormCopy.privacyLinkLabel}</AppLink>.
+            </p>
           </div>
         </div>
       </section>

@@ -1,17 +1,20 @@
 import { useEffect } from 'react'
 import { BrowserRouter, Route, Routes, useLocation } from 'react-router-dom'
 import { FloatTools } from './components/layout/FloatTools'
-import { PrototypeNotice } from './components/layout/PrototypeNotice'
 import { SiteFooter } from './components/layout/SiteFooter'
 import { SiteHeader } from './components/layout/SiteHeader'
 import { ThemeProvider } from './components/layout/ThemeProvider'
 import { minerarGuide } from './content/site'
 import { EntryPage } from './pages/EntryPage'
 import { HomePage } from './pages/HomePage'
+import { LegalPage } from './pages/LegalPage'
 import { LibraryPage } from './pages/LibraryPage'
 import { LinksPage } from './pages/LinksPage'
 import { MinerarPage } from './pages/MinerarPage'
 import { NotFoundPage } from './pages/NotFoundPage'
+import { ReflectionPage } from './pages/ReflectionPage'
+import { ReflectionsIndexPage } from './pages/ReflectionsIndexPage'
+import { SobrePage } from './pages/SobrePage'
 import { SeriesPage } from './pages/SeriesPage'
 
 function RouteEffects() {
@@ -50,7 +53,6 @@ function AppShell() {
       <a className="skip-link" href="#conteudo">
         Pular para o conteúdo
       </a>
-      <PrototypeNotice />
       {isLinksHub ? null : <SiteHeader />}
       <main id="conteudo" tabIndex={-1}>
         <Routes>
@@ -59,6 +61,11 @@ function AppShell() {
           <Route path="/biblioteca" element={<LibraryPage />} />
           <Route path="/biblioteca/:seriesSlug" element={<SeriesPage />} />
           <Route path="/biblioteca/:seriesSlug/:entrySlug" element={<EntryPage />} />
+          <Route path="/reflexoes" element={<ReflectionsIndexPage />} />
+          <Route path="/reflexoes/:slug" element={<ReflectionPage />} />
+          <Route path="/sobre" element={<SobrePage />} />
+          <Route path="/privacidade" element={<LegalPage slug="privacidade" />} />
+          <Route path="/termos" element={<LegalPage slug="termos" />} />
           <Route path="/links" element={<LinksPage />} />
           <Route path="*" element={<NotFoundPage />} />
         </Routes>

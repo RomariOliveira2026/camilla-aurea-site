@@ -63,12 +63,12 @@ export function whatsappHref(): string {
 export type NavItem = { href: string; label: string }
 
 export const navItems: NavItem[] = [
-  { href: '/#sobre', label: 'Sobre' },
+  { href: '/sobre', label: 'Sobre' },
   { href: '/#metodo', label: 'Método Áurea' },
   { href: '/#territorios', label: 'Territórios' },
   { href: '/#luxo-afetivo', label: 'Luxo Afetivo' },
   { href: '/biblioteca', label: 'Biblioteca' },
-  { href: '/#reflexoes', label: 'Reflexões' },
+  { href: '/reflexoes', label: 'Reflexões' },
 ]
 
 /** Itens só no rodapé — não entram no cabeçalho para não diluir o menu. */
@@ -93,25 +93,17 @@ export const hero = {
     width: 689,
     height: 999,
   } satisfies SiteImage,
-  imageCaption: 'Capa aprovada — MINERAR, Método Áurea.',
 }
 
 export const about = {
   eyebrow: 'Sobre',
-  title: 'Sobre Camilla',
+  title: 'Sobre Camilla Áurea',
   image: {
     src: aboutImage,
     alt: 'Retrato de Camilla, sorrindo, sentada em um banco de madeira, com vestido verde-oliva de manga longa.',
     width: 819,
     height: 1024,
   } satisfies SiteImage,
-  paragraphs: [
-    'Camilla Áurea é uma marca autoral de desenvolvimento pessoal feminino, construída em torno de três ideias: poder, valor e luxo afetivo.',
-    'A comunicação desta versão se dirige, como hipótese editorial a validar, a mulheres de 30 a 45 anos interessadas em autovalor, autonomia, presença e relações conscientes.',
-    'O amor romântico pode fazer parte do caminho. Não é o único horizonte da marca: o convite é reconhecer o próprio valor, recuperar a voz e viver com autenticidade — em relação consigo, com as outras pessoas e com as escolhas de cada dia.',
-  ],
-  pendingNote:
-    'A biografia oficial de Camilla está em preparação e será publicada somente após redação e aprovação da autora.',
 }
 
 export type MethodStep = { number: string; name: string; summary: string }
@@ -228,7 +220,7 @@ export const library = {
 export const reflections = {
   eyebrow: 'Reflexões',
   title: 'Reflexões e artigos',
-  intro: 'Este espaço vai reunir textos sobre os temas do Método Áurea.',
+  intro: 'Textos sobre os temas do Método Áurea.',
   emptyState: 'Nenhuma reflexão publicada ainda. Os primeiros textos estão em preparação.',
 }
 

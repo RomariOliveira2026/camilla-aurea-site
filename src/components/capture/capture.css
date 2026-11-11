@@ -170,6 +170,14 @@
   color: var(--text-secondary);
 }
 
+.capture-form__privacy a {
+  color: var(--color-gold-ink);
+}
+
 .capture-form--dark .capture-form__privacy {
   color: var(--color-on-dark-muted);
+}
+
+.capture-form--dark .capture-form__privacy a {
+  color: var(--color-gold-burnt);
 }

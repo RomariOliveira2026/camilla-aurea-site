@@ -166,6 +166,63 @@ html[data-theme='night'] .btn--text {
   text-decoration-color: var(--color-gold-burnt);
 }
 
+.instagram-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  min-height: 2.75rem;
+  color: var(--color-bordo);
+  text-decoration: none;
+}
+
+.instagram-link__icon {
+  flex-shrink: 0;
+  width: 1.5rem;
+  height: 1.5rem;
+  color: var(--color-gold-ink);
+}
+
+.instagram-link__handle {
+  font-size: var(--text-sm);
+  letter-spacing: 0.02em;
+}
+
+.instagram-link:hover .instagram-link__handle {
+  text-decoration: underline;
+  text-decoration-color: var(--color-gold-deep);
+  text-underline-offset: 0.2em;
+}
+
+.instagram-link:focus-visible {
+  outline: 2px solid var(--color-bordo);
+  outline-offset: 3px;
+  border-radius: var(--radius-sm);
+}
+
+.instagram-link--muted {
+  color: var(--color-ink-muted);
+}
+
+html[data-theme='night'] .instagram-link,
+.on-dark .instagram-link {
+  color: var(--color-on-dark);
+}
+
+html[data-theme='night'] .instagram-link__icon,
+.on-dark .instagram-link__icon {
+  color: var(--color-gold-burnt);
+}
+
+html[data-theme='night'] .instagram-link:hover .instagram-link__handle,
+.on-dark .instagram-link:hover .instagram-link__handle {
+  text-decoration-color: var(--color-gold-burnt);
+}
+
+html[data-theme='night'] .instagram-link:focus-visible,
+.on-dark .instagram-link:focus-visible {
+  outline-color: var(--color-gold-burnt);
+}
+
 .btn--unavailable {
   border: 1px dashed var(--color-line);
   color: var(--text-secondary);

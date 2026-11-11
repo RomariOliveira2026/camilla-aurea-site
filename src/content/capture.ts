@@ -14,6 +14,8 @@ export const leadFormCopy = {
     'Demonstração — o formulário funciona só para revisão visual. Nenhum dado é enviado, armazenado ou usado para marketing.',
   privacyNote:
     'O primeiro nome e o e-mail se destinam apenas à entrega do PDF, quando o envio estiver homologado. A autorização de marketing é opcional e separada.',
+  privacyLinkLabel: 'Política de Privacidade',
+  privacyHref: '/privacidade',
   firstNameRequired: 'Informe o primeiro nome.',
   firstNameShort: 'Use pelo menos duas letras.',
   emailRequired: 'Informe o e-mail.',
@@ -51,7 +53,7 @@ export const minerarLanding = {
   formTitle: 'Receber meu guia gratuito',
   formIntro: 'Primeiro nome e e-mail. O envio do PDF fica pendente da homologação do provedor.',
   privacyCompact:
-    'Nome e e-mail se destinam só à entrega do PDF, quando o envio estiver homologado. A Política de Privacidade ainda está em elaboração. Nenhum contato fica no navegador. Marketing é opcional e não é exigido para o guia.',
+    'Nome e e-mail se destinam só à entrega do PDF, quando o envio estiver homologado. Nenhum contato fica no navegador. Marketing é opcional e não é exigido para o guia.',
   methodEyebrow: 'Método Áurea',
   methodTitle: 'Minerar é a primeira etapa',
   methodText:

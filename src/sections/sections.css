@@ -78,7 +78,7 @@
 
   .hero__figure {
     position: sticky;
-    top: calc(var(--header-height) + var(--prototype-height) + var(--space-5));
+    top: calc(var(--header-height) + var(--space-5));
   }
 }
 
@@ -260,6 +260,12 @@
   gap: var(--space-5);
   font-size: var(--text-lg);
   max-width: 38rem;
+}
+
+.about__subtitle {
+  font-family: var(--font-display);
+  font-style: italic;
+  color: var(--text-accent);
 }
 
 .pending-note {
@@ -501,6 +507,14 @@
   color: var(--text-secondary);
 }
 
-.empty-state__hint .btn {
-  margin-top: var(--space-2);
+.empty-state .instagram-link {
+  margin-top: var(--space-1);
+}
+
+.home-reflexoes {
+  max-width: 42rem;
+}
+
+.home-reflexoes__more {
+  margin-top: var(--space-6);
 }

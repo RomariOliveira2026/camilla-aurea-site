@@ -1,6 +1,7 @@
-import { brand, disclaimer, footerOnlyItems, instagram, navItems } from '../../content/site'
+import { brand, disclaimer, footerOnlyItems, navItems } from '../../content/site'
 import { legalDocuments } from '../../content/legal'
 import { AppLink } from '../ui/AppLink'
+import { InstagramLink } from '../ui/InstagramLink'
 import { Wordmark } from '../ui/Wordmark'
 
 export function SiteFooter() {
@@ -17,7 +18,7 @@ export function SiteFooter() {
 
           <nav aria-label="Navegação do rodapé">
             <h2 className="site-footer__heading">Navegação</h2>
-            <ul role="list" className="site-footer__list">
+            <ul role="list" className="site-footer__list site-footer__list--split">
               {[...navItems, ...footerOnlyItems].map((item) => (
                 <li key={item.href}>
                   <AppLink href={item.href}>{item.label}</AppLink>
@@ -30,14 +31,7 @@ export function SiteFooter() {
             <h2 className="site-footer__heading">Contato</h2>
             <ul role="list" className="site-footer__list">
               <li>
-                {instagram.confirmed ? (
-                  <a href={instagram.url} target="_blank" rel="noopener noreferrer">
-                    {instagram.label} {instagram.handle}
-                    <span className="sr-only"> (abre em nova aba)</span>
-                  </a>
-                ) : (
-                  <span className="site-footer__muted">{instagram.label} — em confirmação</span>
-                )}
+                <InstagramLink />
               </li>
             </ul>
           </div>
@@ -66,7 +60,6 @@ export function SiteFooter() {
           <p>
             © {year} {brand.name}. Todos os direitos reservados.
           </p>
-            <p>Versão WEB-ÁUREA-LINKS-003 · em revisão visual</p>
         </div>
       </div>
     </footer>

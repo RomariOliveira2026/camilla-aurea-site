@@ -22,7 +22,7 @@ export function Hero() {
           </div>
         </div>
         <div className="hero__figure">
-          <GuideMockup caption={hero.imageCaption} priority />
+          <GuideMockup priority />
         </div>
       </div>
     </section>

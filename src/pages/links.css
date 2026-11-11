@@ -1,5 +1,5 @@
 .links-page {
-  min-height: calc(100svh - var(--prototype-height));
+  min-height: 100svh;
   padding: var(--space-5) var(--gutter) var(--space-6);
   background:
     radial-gradient(80% 46% at 50% 0%, rgb(201 168 106 / 0.1), transparent 62%),

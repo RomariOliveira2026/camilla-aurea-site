@@ -86,7 +86,6 @@
   --container-max: 72rem;
   --container-narrow: 44rem;
   --header-height: 5.25rem;
-  --prototype-height: 2.25rem;
 
   /* Bordas */
   --radius-sm: 2px;
@@ -133,6 +132,7 @@ html[data-theme='night'] .method__name,
 html[data-theme='night'] .territory__name,
 html[data-theme='night'] .library__name,
 html[data-theme='night'] .empty-state__text,
+html[data-theme='night'] .about__subtitle,
 html[data-theme='night'] .page-header__title,
 html[data-theme='night'] .series-card__title,
 html[data-theme='night'] .entry-card__title,

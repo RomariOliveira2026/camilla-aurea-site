@@ -77,6 +77,10 @@
   color: var(--text-secondary);
 }
 
+.minerar-privacy a {
+  color: var(--color-gold-ink);
+}
+
 .minerar-benefits {
   display: grid;
   gap: var(--space-4);
@@ -347,4 +351,56 @@
   flex-wrap: wrap;
   gap: var(--space-3);
   margin-top: var(--space-5);
+}
+
+/* ---------- Documentos legais ---------- */
+.legal {
+  padding-block: clamp(var(--space-7), 6vw, var(--space-9));
+  background: var(--surface-page);
+}
+
+.legal__inner {
+  max-width: 42rem;
+}
+
+.legal__title {
+  margin-top: var(--space-4);
+  font-size: clamp(2.1rem, 1.4rem + 1.8vw, 3rem);
+  color: var(--color-bordo);
+}
+
+.legal__updated {
+  margin-top: var(--space-3);
+  font-size: var(--text-sm);
+  color: var(--text-accent);
+}
+
+.legal__intro {
+  margin-top: var(--space-5);
+  font-size: var(--text-lg);
+}
+
+.legal__section {
+  margin-top: var(--space-7);
+}
+
+.legal__section h2 {
+  font-size: var(--text-xl);
+  color: var(--color-bordo);
+  margin-bottom: var(--space-4);
+}
+
+.legal__section p + p {
+  margin-top: var(--space-4);
+}
+
+.legal__related {
+  margin-top: var(--space-8);
+  padding-top: var(--space-6);
+  border-top: 1px solid var(--color-line);
+}
+
+html[data-theme='night'] .legal__title,
+html[data-theme='night'] .legal__section h2 {
+  color: var(--color-offwhite);
 }

@@ -1,29 +1,6 @@
-/* ---------- Aviso de protótipo ---------- */
-.prototype-notice {
-  background: var(--color-bordo-950);
-  color: var(--color-on-dark-muted);
-  font-size: var(--text-xs);
-  letter-spacing: 0.02em;
-  text-align: center;
-  padding-block: var(--space-2);
-}
-
-.prototype-notice__short {
-  display: none;
-}
-
 @media (max-width: 55.99em) {
   :root {
     --header-height: 3.75rem;
-    --prototype-height: 1.75rem;
-  }
-
-  .prototype-notice__short {
-    display: inline;
-  }
-
-  .prototype-notice__full {
-    display: none;
   }
 }
 
@@ -310,7 +287,12 @@
 
 @media (min-width: 56em) {
   .site-footer__grid {
-    grid-template-columns: 1.6fr repeat(3, 1fr);
+    grid-template-columns: 1.45fr 1.85fr 1fr 1.15fr;
+  }
+
+  .site-footer__list--split {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    column-gap: var(--space-5);
   }
 }
 
@@ -340,6 +322,20 @@
 .site-footer__list {
   display: grid;
   gap: var(--space-2);
+}
+
+.site-footer .instagram-link {
+  min-height: 0;
+  gap: 0.45rem;
+}
+
+.site-footer .instagram-link__icon {
+  width: 1.875rem;
+  height: 1.875rem;
+}
+
+.site-footer .instagram-link__handle {
+  font-size: 0.8125rem;
 }
 
 .site-footer__muted {
