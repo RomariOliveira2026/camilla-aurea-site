@@ -60,6 +60,9 @@ export function SiteFooter() {
           <p>
             © {year} {brand.name}. Todos os direitos reservados.
           </p>
+          <p className="site-footer__credit">
+            Construído com BuilderTudo Technologies | Cnpj: 46.709.692/0001-42
+          </p>
         </div>
       </div>
     </footer>

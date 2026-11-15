@@ -441,3 +441,7 @@
   margin-top: var(--space-6);
   font-size: var(--text-xs);
 }
+
+.site-footer__credit {
+  color: var(--color-on-dark-muted);
+}
