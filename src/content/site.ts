@@ -226,3 +226,6 @@ export const reflections = {
 
 export const disclaimer =
   'Os conteúdos de Camilla Áurea têm caráter educativo e de desenvolvimento pessoal. Não constituem diagnóstico, terapia ou tratamento e não substituem o acompanhamento de profissionais de saúde.'
+
+export const builtBy =
+  'Construído por BuilderTudo Technologies | Cnpj: 46.709.692/0001-42.'

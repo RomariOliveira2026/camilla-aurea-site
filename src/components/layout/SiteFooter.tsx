@@ -1,4 +1,4 @@
-import { brand, disclaimer, footerOnlyItems, navItems } from '../../content/site'
+import { brand, builtBy, disclaimer, footerOnlyItems, navItems } from '../../content/site'
 import { legalDocuments } from '../../content/legal'
 import { AppLink } from '../ui/AppLink'
 import { InstagramLink } from '../ui/InstagramLink'
@@ -60,6 +60,7 @@ export function SiteFooter() {
           <p>
             © {year} {brand.name}. Todos os direitos reservados.
           </p>
+          <p>{builtBy}</p>
         </div>
       </div>
     </footer>
